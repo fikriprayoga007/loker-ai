@@ -24,7 +24,12 @@ A powerful automated system to find and extract job vacancies from across the in
 
 ## ⚙️ Installation
 1. Clone the repository.
-2. Install dependencies:
+2. Create and activate a virtual environment:
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+3. Install dependencies:
    ```bash
    pip install -r requirements.txt
    ```

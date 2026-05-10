@@ -1,5 +1,5 @@
-streamlit
-google-generativeai
-firecrawl-py
-pydantic
-python-dotenv
+streamlit==1.32.0
+google-generativeai==0.4.1
+firecrawl-py==0.0.12
+pydantic==2.6.4
+python-dotenv==1.0.1
