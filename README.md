@@ -3,9 +3,9 @@
 A powerful automated system to find and extract job vacancies from across the internet using AI.
 
 ## 🚀 Tech Stack
-- **Python 3.x**
+- **Python 3.11**
 - **Streamlit**: For the web-based User Interface.
-- **Firecrawl**: A powerful web crawler and search engine for LLMs.
+- **Firecrawl**: Web crawler and search engine accessed via **MCP (Model Context Protocol)**.
 - **Gemini 3.1 Flash-Lite**: Google's efficient LLM for high-speed data extraction.
 - **Pydantic**: For data validation and structured output.
 
