@@ -1,9 +1,9 @@
 version: '3.8'
 
 services:
-  job-collector:
+  loker-ai:
     build: .
-    container_name: job-vacancy-collector
+    container_name: container_loker-ai
     ports:
       - "8502:8501" # Tetap ada untuk akses LAN (http://ip-server:8502)
     env_file:
@@ -15,8 +15,8 @@ services:
       - STREAMLIT_SERVER_PORT=8501
       - STREAMLIT_SERVER_ADDRESS=0.0.0.0
 
-  cloudflare-tunnel:
+  tunnel-loker-ai:
     image: cloudflare/cloudflared:latest
-    container_name: cloudflare-tunnel-job
+    container_name: container_tunnel-loker-ai
     restart: unless-stopped
     command: tunnel --no-autoupdate run --token eyJhIjoiOGFjMmNiYzAyMGVhY2FmODM5OWY0M2Y5Yzc5YTdiNTAiLCJ0IjoiMzNhNjk5ZjAtNTk4MC00YmFkLWI2M2UtMDdjYTUwNTRlZDQzIiwicyI6Ik1qSmtNVFEyTWpBdE5HTXlaaTAwWmpnNUxXSmxZamt0TURWaFlXRTRNR0k0WWpWbCJ9
