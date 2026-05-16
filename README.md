@@ -1,4 +1,4 @@
-# Job Vacancy Collector
+# Loker AI
 
 A powerful automated system to find and extract job vacancies from across the internet using AI.
 
