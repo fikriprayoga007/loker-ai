@@ -3,9 +3,38 @@ import time
 from src.processor import JobProcessor
 from src.utils import format_job_card
 
-st.set_page_config(page_title="AI Job Vacancy Collector", page_icon="💼", layout="wide")
+st.set_page_config(page_title="Loker AI", page_icon="💼", layout="wide")
 
-st.title("💼 AI Job Vacancy Collector")
+# 2. Sisipkan Meta Tag untuk WhatsApp/Open Graph via JavaScript
+meta_tags = """
+<script>
+    const head = window.parent.document.head;
+    
+    // Fungsi untuk membuat/update meta tag
+    function setMeta(property, content, isName = false) {
+        let element = head.querySelector(`meta[${isName ? 'name' : 'property'}="${property}"]`);
+        if (!element) {
+            element = window.parent.document.createElement('meta');
+            element.setAttribute(isName ? 'name' : 'property', property);
+            head.appendChild(element);
+        }
+        element.setAttribute('content', content);
+    }
+
+    // Pengaturan Meta untuk WhatsApp & Sosial Media
+    setMeta('og:title', 'Loker AI - Kolektor Lowongan Kerja Otomatis');
+    setMeta('og:description', 'Temukan lowongan kerja terbaik yang dikumpulkan secara otomatis menggunakan kecerdasan buatan.');
+    setMeta('og:url', 'https://lokerai.fikriprayoga.com');
+    setMeta('og:type', 'website');
+    
+    // Fallback untuk sistem lama
+    setMeta('description', 'Temukan lowongan kerja terbaik yang dikumpulkan secara otomatis.', true);
+</script>
+"""
+# Jalankan script secara sembunyi (tinggi 0 agar tidak merusak UI)
+st.components.v1.html(meta_tags, height=0, width=0)
+
+st.title("💼 Loekr AI")
 
 # Initialize session state
 if "is_running" not in st.session_state:
